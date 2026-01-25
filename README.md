@@ -1,4 +1,4 @@
-# 🖌️ Tiamo Makeup – Professional Makeup Artist Landing Page
+<h1 align="center">🖌️ Tiamo Makeup – Professional Makeup Artist Landing Page</h1>
 
 <p align="center">
   <img src="https://i.imgur.com/nsVcAju.png" width="800" alt="Tiamo Makeup Landing Page Preview">
