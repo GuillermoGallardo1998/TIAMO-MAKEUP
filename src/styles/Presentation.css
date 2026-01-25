@@ -1,0 +1,183 @@
+/* ============================= */
+/* FONTS */
+/* ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* ============================= */
+/* VARIABLES */
+/* ============================= */
+:root {
+  --primary-color: #f2efeb;
+  --secondary-color: #57585a;
+  --tertiary-color: #a58868;
+  --text-color: #333;
+  --text-color-white: #666;
+  --hover-color: #bc211d;
+  --bg: #0f0f0f;
+  --icon-size: 140px;
+}
+
+/* ============================= */
+/* RESET GENERAL */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Fahkwang", sans-serif;
+}
+
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+.presentation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.presentation-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.presentation-title {
+  font-family: "Italiana", serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: var(--tertiary-color);
+  margin-bottom: 2rem;
+}
+
+.presentation-button {
+  font-family: "Italiana", serif;
+  padding: 16px 42px;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  background: var(--tertiary-color);
+  color: var(--bg);
+  transition: all 0.3s ease;
+}
+
+.presentation-button:hover {
+  transform: scale(1.05);
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.presentation-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  user-select: none;
+  object-fit: cover;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.9;
+  will-change: transform;
+  transition: opacity 0.3s ease;
+}
+
+.cart-icon {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  z-index: 20;
+}
+
+/* =====================================================
+   RESPONSIVE — DESKTOP FIRST
+===================================================== */
+
+/* ===== 1440 ↓ ===== */
+@media (max-width: 1440px) {
+  :root {
+    --icon-size: 140px;
+  }
+  .presentation-title {
+    font-size: 2.4rem;
+  }
+}
+
+/* ===== 1024 ↓ ===== */
+@media (max-width: 1024px) {
+  :root {
+    --icon-size: 120px;
+  }
+  .presentation-title {
+    font-size: 2.1rem;
+  }
+  .presentation-button {
+    font-size: 1.5rem;
+    padding: 14px 36px;
+  }
+}
+
+/* ===== 768 ↓ ===== */
+@media (max-width: 768px) {
+  :root {
+    --icon-size: 100px;
+  }
+  .presentation-title {
+    font-size: 1.9rem;
+  }
+  .cart-icon {
+  width: 100px;
+  height: 100px;
+
+}
+
+}
+
+/* ===== 425 ↓ ===== */
+@media (max-width: 425px) {
+  :root {
+    --icon-size: 80px;
+  }
+  .presentation-title {
+    font-size: 1.5rem;
+  }
+  .presentation-button {
+    font-size: 1rem;
+    padding: 12px 28px;
+  }
+}
+
+/* ===== 320 ↓ ===== */
+@media (max-width: 320px) {
+  :root {
+    --icon-size: 60px;
+  }
+  .presentation-title {
+    font-size: 1.25rem;
+  }
+  .presentation-button {
+    padding: 10px 22px;
+  }
+}

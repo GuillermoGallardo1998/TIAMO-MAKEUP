@@ -1,0 +1,218 @@
+/* ============================= */
+/* FONTS */
+/* ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* COLOR VARIABLES */
+:root {
+  --primary-color: #f2efeb;
+  --secondary-color: #57585a;
+  --tertiary-color: #a58868;
+  --text-color: #333;
+  --text-color-white: #666;
+  --hover-color: #bc211d;
+  --bg: #0f0f0f;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-color);
+}
+
+/* SECCIÓN PRINCIPAL */
+.experiencias-section {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: var(--bg);
+  background-image: url(./images/Texture4.png), url(./images/Texture5.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 600px, 300px;
+  background-position: right top, left top; 
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.experiencias-titulo {
+  font-family: "Italiana", serif;
+  font-size: 60px;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.experiencias-subtitulo {
+  color: var(--primary-color);
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.experiencias-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experiencia-card {
+  position: absolute;
+  width: 460px;
+  height: 360px;
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s ease;
+  top: 0;
+  overflow: hidden;
+}
+
+.experiencia-card.centro {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  top: 0;
+  z-index: 3;
+  filter: blur(0);
+}
+
+.experiencia-card.izquierda,
+.experiencia-card.derecha {
+  opacity: 0.6;
+  transform: scale(0.9);
+  z-index: 2;
+  filter: blur(3px);
+  top: 50px;
+}
+
+.experiencia-card.izquierda {
+  transform: translateX(-300px) scale(0.9);
+}
+
+.experiencia-card.derecha {
+  transform: translateX(300px) scale(0.9);
+}
+
+.experiencia-card.oculta {
+  opacity: 0;
+  z-index: 1;
+  filter: blur(8px);
+  transform: scale(0.8);
+}
+
+.experiencia-foto {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.experiencia-card h3 {
+  font-family: "Italiana", serif;
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.experiencia-titulo {
+  color: var(--text-color-white);
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.experiencia-texto {
+  color: var(--text-color);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.experiencias-controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.experiencias-controles button {
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: var(--primary-color);
+  user-select: none;
+  cursor: pointer;
+  margin: 0 20px;
+  transition: all 0.3s ease;
+}
+
+.experiencias-controles button:hover {
+  color: var(--tertiary-color);
+  transform: scale(1.2);
+}
+
+.experiencias-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 12px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.dot.activo {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {
+
+  .experiencias-titulo {
+  font-size: 48px;
+  
+}
+  .experiencia-card {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    
+    padding: 20px;
+  }
+
+  .experiencia-card.izquierda {
+    transform: translateX(-180px) scale(0.9);
+  }
+
+  .experiencia-card.derecha {
+    transform: translateX(180px) scale(0.9);
+  }
+
+  .experiencias-slider {
+    height: 380px;
+  }
+}

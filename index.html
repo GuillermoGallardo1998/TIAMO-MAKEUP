@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+     <!-- Preload Google Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Italiana&family=Open+Sans:wght@300;400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <title>tiamo-makeup</title>
+
+    <!-- Meta descripción optimizada para SEO -->
+    <meta name="description" content="Nahomy Tiamo, maquilladora profesional. Crea looks únicos para bodas, quinceañeras y eventos especiales. Resalta tu belleza y siéntete radiante en cada ocasión.">
+
+    <!-- Datos estructurados para Google (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Nahomy Tiamo",
+      "description": "Maquilladora profesional. Servicios de maquillaje de boda, artístico, full glam, social y más. Resalta tu belleza única.",
+      "url": "https://tiamo-makeup.com",
+      "logo": "https://tiamo-makeup.com/logo.png",
+      "telephone": "+57 3244493254",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dirección aquí",
+        "addressLocality": "Ciudad",
+        "addressRegion": "Región",
+        "postalCode": "Código Postal",
+        "addressCountry": "CO"
+      },
+      "sameAs": [
+        "https://www.instagram.com/tiamo",
+        "https://www.facebook.com/tiamo"
+      ]
+    }
+    </script>
+
+  </head>
+  <body>
+    <main>
+      <div id="root"></div>
+    </main>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

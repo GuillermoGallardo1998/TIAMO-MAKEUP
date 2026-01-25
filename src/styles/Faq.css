@@ -1,0 +1,111 @@
+/* ============================= */
+/* FONTS */
+/* ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+	--primary-color: #f2efeb;
+	--secondary-color: #57585a;
+	--tertiary-color: #a58868;
+	--text-color: #333;
+  --text-color-white: #666;
+	--hover-color: #bc211d;
+  --bg: #0f0f0f;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+	font-family: "Fahkwang", sans-serif;
+  font-style: normal;
+	color: var(--hover-color);
+	font-family: "Open Sans", sans-serif;
+}
+
+.Faq {
+	width: 100%;
+	min-height: 80dvh;
+  background-color: var(--bg);
+  padding: 100px 20px 200px 20px;
+  text-align: center;
+}
+
+.Faq-title {
+  font-family: "Italiana", serif;
+  font-size: 60px;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+}
+
+
+.Faq-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.Faq-item {
+  border-bottom: 1px solid var(--primary-color);
+  padding: 16px 0;
+}
+
+.Faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.Faq-question p {
+  font-weight: 500;
+  color: var(--primary-color);
+  font-size: 20px;
+  transition: color 0.5s ease;
+}
+
+.Faq-question:hover p {
+  color: var(--tertiary-color);
+}
+
+.Faq-item.active .Faq-question p {
+  color: var(--tertiary-color);
+}
+
+.Faq-chevron {
+  width: 16px;
+  height: 16px;
+  border-right: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--tertiary-color);
+  transform: rotate(45deg);
+  transition: transform 0.4s ease, border-color 0.3s ease;
+  flex-shrink: 0; /* evita el temblor al expandir */
+}
+
+.Faq-chevron.open {
+  transform: rotate(-135deg);
+}
+
+.Faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+.Faq-answer.show {
+  max-height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 10px;
+}
+
+.Faq-answer p {
+  color: var(--primary-color);
+  font-size: 1rem;
+  line-height: 1.6;
+}
