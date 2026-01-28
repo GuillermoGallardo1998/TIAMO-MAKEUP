@@ -20,15 +20,20 @@
 /* ============================= */
 /* RESET GENERAL */
 /* ============================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-style: normal;
-	font-family: "Open Sans", sans-serif;
 }
 
+body {
+  font-family: "Open Sans", "Fahkwang", sans-serif;
+  font-style: normal;
+  color: var(--text-color);
+  background-color: var(--bg);
+}
 /* ============================= */
 /* CONTENT */
 /* ============================= */

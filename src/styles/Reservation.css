@@ -23,8 +23,13 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+}
+
+body {
+  font-family: "Open Sans", "Fahkwang", sans-serif;
   font-style: normal;
-	font-family: "Open Sans", sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg);
 }
 
 .Reservation {
