@@ -52,20 +52,24 @@ function Reservation() {
 
         {/* 👇 Conectamos el form */}
         <form ref={form} onSubmit={sendEmail} className="Reservation-form">
-          <div className="Reservation-form-row">
-            <input 
-              type="text" 
-              name="from_name"   // ESTE NOMBRE debe coincidir con el template
-              placeholder="Nombre*" 
-              required 
-            />
-            <input 
-              type="email" 
-              name="from_email"  // Debe coincidir con el template
-              placeholder="E-mail*" 
-              required 
-            />
-          </div>
+            <div className="Reservation-form-row">
+              <input 
+                type="text" 
+                name="from_name"
+                placeholder="Nombre*" 
+                required
+                pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,50}$"
+                title="El nombre solo puede contener letras y espacios, mínimo 2 caracteres"
+              />
+              <input 
+                type="email" 
+                name="from_email"
+                placeholder="E-mail*" 
+                required
+                pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                title="Ingresa un correo válido, ejemplo: correo@dominio.com"
+              />
+            </div>
 
           <input 
             type="text" 
@@ -75,7 +79,7 @@ function Reservation() {
 
           <textarea 
             name="message" 
-            placeholder="Descripción"
+            placeholder="Deja aquí toda la información detallada. También puedes agregar tu número y decir si deseas que te escriba por WhatsApp o te llame; de lo contrario, me comunicaré solo por correo. Gracias."
           ></textarea>
 
           <button type="submit">Enviar Mensaje</button>
