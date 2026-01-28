@@ -20,8 +20,8 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-  color: var(--text-color);
+  font-style: normal;
+	font-family: "Open Sans", sans-serif;
 }
 
 /* SECCIÓN PRINCIPAL */

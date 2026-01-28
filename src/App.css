@@ -1,3 +1,28 @@
+/* ============================= */
+/* FONTS */
+/* ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* COLOR VARIABLES */
+:root {
+  --primary-color: #f2efeb;
+  --secondary-color: #57585a;
+  --tertiary-color: #a58868;
+  --text-color: #333;
+  --text-color-white: #666;
+  --hover-color: #bc211d;
+  --bg: #0f0f0f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-style: normal;
+	font-family: "Open Sans", sans-serif;
+}
+
 .whatsapp-float {
   position: fixed;
   bottom: 30px;
