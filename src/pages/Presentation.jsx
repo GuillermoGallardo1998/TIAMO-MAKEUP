@@ -110,8 +110,20 @@ useEffect(() => {
     cancelAnimationFrame(animationRef.current);
 
     const container = containerRef.current;
-    const targetX = 20;
-    const targetY = container.clientHeight - iconSize - 20;
+    const isMobile = window.innerWidth < 769;
+
+    let targetX;
+    let targetY;
+
+    if (isMobile) {
+      // Centro abajo (igual que tu CSS móvil)
+      targetX = (container.clientWidth / 2) - (iconSize / 2);
+      targetY = container.clientHeight - iconSize - 100;
+    } else {
+      // Esquina inferior izquierda (desktop)
+      targetX = 20;
+      targetY = container.clientHeight - iconSize - 20;
+    }
 
     let finished = 0;
 

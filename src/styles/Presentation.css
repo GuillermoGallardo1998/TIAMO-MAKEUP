@@ -148,11 +148,13 @@
     font-size: 1.9rem;
   }
   .cart-icon {
+  bottom: 100px;
+left: 50%;
+transform: translateX(-50%); 
   width: 100px;
   height: 100px;
 
 }
-
 }
 
 /* ===== 425 ↓ ===== */

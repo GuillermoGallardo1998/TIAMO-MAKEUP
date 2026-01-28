@@ -31,7 +31,7 @@
 
 .Reservation {
 	width: 100%;
-	min-height: 88dvh;
+	min-height: 100dvh;
 	background-image: url(./images/Texture3.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -40,6 +40,7 @@
   justify-content: center;
 	align-items: center;
   background-color: var(--bg);
+  padding: 100px 20px;
 }
 
 
@@ -201,6 +202,9 @@
 }
 
 @media (max-width: 425px) {
+  .Reservation {
+    padding: 100px 0px;
+  }
   .Reservation-contact-info {
     width: 100%;
     align-items: center;

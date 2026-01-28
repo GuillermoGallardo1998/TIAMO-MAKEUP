@@ -25,30 +25,10 @@ function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  useEffect(() => {
-  const isMobile = window.innerWidth < 768; // detecta pantallas <768px
 
-  if (isMobile && (menuCenterOpen || menuRightOpen)) {
-    document.body.style.overflow = "hidden"; // bloquea scroll solo en móvil
-  } else {
-    document.body.style.overflow = "auto"; // restaurar scroll
-  }
 
-  // Restaurar scroll si cambian las dimensiones de la ventana
-  const handleResize = () => {
-    const isMobileResize = window.innerWidth < 768;
-    if (!isMobileResize) {
-      document.body.style.overflow = "auto";
-    }
-  };
-
-  window.addEventListener("resize", handleResize);
-
-  return () => {
-    window.removeEventListener("resize", handleResize);
-    document.body.style.overflow = "auto"; // asegurarse de limpiar al desmontar
-  };
-}, [menuCenterOpen, menuRightOpen]);
+  
+ 
 
 
 
@@ -69,22 +49,22 @@ function Header() {
               ✕
             </button>
             <ul className="Header-menu-center-links">
-              <li><a href="#home">Inicio</a></li>
-              <li><a href="#about">Acerca de mí</a></li>
-              <li><a href="#services">Servicios</a></li>
-              <li><a href="#experiencias">Experiencias</a></li>
-              <li><a href="#reservation">Agenda</a></li>
-              <li><a href="#Faq">FAQ</a></li>
+              <li><a href="#home" onClick={() => setMenuCenterOpen(false)}>Inicio</a></li>
+            <li><a href="#about" onClick={() => setMenuCenterOpen(false)}>Acerca de mí</a></li>
+            <li><a href="#services" onClick={() => setMenuCenterOpen(false)}>Servicios</a></li>
+            <li><a href="#experiencias" onClick={() => setMenuCenterOpen(false)}>Experiencias</a></li>
+            <li><a href="#reservation" onClick={() => setMenuCenterOpen(false)}>Agenda</a></li>
+            <li><a href="#Faq" onClick={() => setMenuCenterOpen(false)}>FAQ</a></li>
             </ul>
           </nav>
 
           <ul className="Header-menu-center-desktop">
-            <li><a href="#home">Inicio</a></li>
-              <li><a href="#about">Acerca de mí</a></li>
-              <li><a href="#services">Servicios</a></li>
-              <li><a href="#experiencias">Experiencias</a></li>
-              <li><a href="#reservation">Agenda</a></li>
-              <li><a href="#Faq">FAQ</a></li>
+            <li><a href="#home" onClick={() => setMenuCenterOpen(false)}>Inicio</a></li>
+            <li><a href="#about" onClick={() => setMenuCenterOpen(false)}>Acerca de mí</a></li>
+            <li><a href="#services" onClick={() => setMenuCenterOpen(false)}>Servicios</a></li>
+            <li><a href="#experiencias" onClick={() => setMenuCenterOpen(false)}>Experiencias</a></li>
+            <li><a href="#reservation" onClick={() => setMenuCenterOpen(false)}>Agenda</a></li>
+            <li><a href="#Faq" onClick={() => setMenuCenterOpen(false)}>FAQ</a></li>
           </ul>
         </div>
 
@@ -143,8 +123,8 @@ function Header() {
               <div className="Header-menu-right-info-social">
                 <p>// SIGUENOS</p>
                 <div className="Header-menu-right-info-social-logo">
-                  <a href=""><img src="./icons/Insta.png" alt="Instagram Icon" /></a>
-                  <a href=""><img src="./icons/Wap.png" alt="Whatsapp Icon" /></a>
+                  <a href="https://www.instagram.com/tiamomakeup/" target="_blank"><img src="./icons/Insta.png" alt="Instagram Icon" /></a>
+                  <a href="https://wa.me/573244493254?text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20para%20hacer%20una%20reservaci%C3%B3n%20de%20maquillaje." target="_blank"><img src="./icons/Wap.png" alt="Whatsapp Icon" /></a>
                 </div>
               </div>
 

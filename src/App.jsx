@@ -56,7 +56,7 @@ function App() {
           </main>
 
           <a
-            href="https://wa.me/573244493254"
+            href="https://wa.me/573244493254?text=Hola%2C%20estoy%20interesada%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20para%20hacer%20una%20reservaci%C3%B3n%20de%20maquillaje."
             className="whatsapp-float"
             target="_blank"
             rel="noopener noreferrer"

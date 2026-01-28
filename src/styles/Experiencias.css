@@ -31,7 +31,7 @@
   background-color: var(--bg);
   background-image: url(./images/Texture4.png), url(./images/Texture5.png);
   background-repeat: no-repeat, no-repeat;
-  background-size: 600px, 300px;
+  background-size: 600px 100%, 300px auto;
   background-position: right top, left top; 
   padding: 100px 20px;
   text-align: center;

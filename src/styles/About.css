@@ -105,7 +105,7 @@
 
 .About-img {
 	position: absolute;
-	top: 50px;
+	top: 100px;
 	left: 50%;
 	bottom: auto;
 	transform: translateX(-50%);
@@ -150,7 +150,7 @@
 
 @media (min-width: 320px) {
 	.About {
-		padding: 500px 20px 60px 20px;
+		padding: 600px 20px 60px 20px;
 	}
 }
 

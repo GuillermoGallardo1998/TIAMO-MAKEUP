@@ -27,7 +27,11 @@
 
 .Faq {
 	width: 100%;
-	min-height: 80dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	min-height: 100dvh;
   background-color: var(--bg);
   padding: 100px 20px 200px 20px;
   text-align: center;
@@ -58,6 +62,7 @@
   align-items: center;
   cursor: pointer;
   user-select: none;
+  gap: 20px;
 }
 
 .Faq-question p {
@@ -109,3 +114,17 @@
   font-size: 1rem;
   line-height: 1.6;
 }
+
+@media (max-width: 1024px) {
+  .Faq {
+  padding: 100px 60px 200px 60px;
+}
+}
+
+@media (max-width: 425px) {
+  .Faq {
+  padding: 100px 20px 200px 20px;
+}
+}
+
+
