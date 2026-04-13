@@ -1,7 +1,7 @@
 <h1 align="center">🖌️ Tiamo Makeup – Professional Makeup Artist Landing Page</h1>
 
 <p align="center">
-  <img src="https://i.imgur.com/nsVcAju.png" width="800" alt="Tiamo Makeup Landing Page Preview">
+  <img src="https://i.imgur.com/cYMSJc0.png" width="800" alt="Tiamo Makeup Landing Page Preview">
 </p>
 
 ---
@@ -52,10 +52,16 @@ It is deployed on **Firebase Hosting** and integrates **EmailJS** for the contac
   <img src="https://i.imgur.com/TkIZuYj.png" width="800" alt="Tiamo Makeup Landing Page Preview">
 </p>
 
+## CHAT BOT
+
+<p align="center">
+  <img src="https://i.imgur.com/2f5wBYi.png" width="800" alt="Chat Bot Tiamo Makeup">
+</p>
+
 ---
 
 ## 🚀 Live Demo
 
-🔗 [View Live Page](https://tiamo-makeup.web.app)
+🔗 [View Live Page](https://tiamomakeup.art/)
 
 ---
